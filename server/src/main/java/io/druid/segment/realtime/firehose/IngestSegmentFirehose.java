@@ -123,7 +123,9 @@ public class IngestSegmentFirehose implements Firehose
 
                                         for (Map.Entry<String, DimensionSelector> dimSelector : dimSelectors.entrySet()) {
                                           final String dim = dimSelector.getKey();
+					  System.out.println("Dimension values Sonam = "+dim);
                                           final DimensionSelector selector = dimSelector.getValue();
+					  System.out.println("Dimension Selector values Sonam = "+selector.toString());
                                           final IndexedInts vals = selector.getRow();
 
                                           if (vals.size() == 1) {
